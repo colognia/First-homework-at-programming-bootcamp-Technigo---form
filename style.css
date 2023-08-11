@@ -1,0 +1,58 @@
+/* general settings */
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Oxygen', sans-serif;
+    /* light 300, regular 400, bold 500 */
+    --primarycolor: hsla(302, 75%, 60%, 100%);
+    --secondarycolor: hsla(302, 62%, 23%, 80%);
+    --formbackground: hsla(0, 5%, 30%, 40%);
+    --bodybackground: rgb(35, 35, 37);
+    color: var(--primarycolor);
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(./pics/backgroundimage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--bodybackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    /* std-setting */
+}
+
+/* formdiv */
+main {
+    background-color: var(--formbackground);
+    width: 90%;
+    max-width: 500px;
+    border: 3px solid var(--primarycolor);
+    border-radius: 30px;
+    padding: 8%;
+}
+
+h1 {
+    font-size: 20px;
+    letter-spacing: .2em;
+    text-shadow: 2px 2px 1px var(--secondarycolor);
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

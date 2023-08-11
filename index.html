@@ -1,0 +1,80 @@
+<!-- Explanation Section - You Can delete this after you start -->
+<!-- <section>
+    <h1>Start Building your form here:</h1>
+    <p>In this exercise, you will create a fun and interactive HTML form to collect information about people's favorite
+        musical artists.</p>
+    <p>This exercise will help you practice creating various form elements and understand how to gather user input.</p>
+    <p>This form should contain the following:</p>
+    <ul>
+        <li>Name field</li>
+        <li>Email field</li>
+        <li>Phone field</li>
+        <li>A dropdown field to ask for favorite genre</li>
+        <li>A text area field to ask the user to explain why they like this genre so much</li>
+        <li>A button to submit the form</li>
+        <li>A button to reset the form</li>
+    </ul>
+    <p><span>Important:</span> Remember to add labels for each of the inputs asked for</p>
+</section> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="charset" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <!-- todo icon -->
+    <title>1st homework for programming students - building a form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="h1gradientdiv">
+            <h1>Get involved and share your favourite music artist with the community !</h1>
+        </div>
+        <!-- extradiv for gradient necessary -->
+        <form action="#" id="form" method="post" target="_self">
+            <!-- wird grid, ul macht keinen Sinn -->
+            <input type="text" class="griditem" id="firstname" name="firstname" placeholder="your first name" required>
+            <input type="text" class="griditem" id="lastname" name="lastname" placeholder="your last name" required>
+            <input type="text" class="griditem" id="artistname" name="artistname" placeholder="favourite artist name"
+                required>
+            <div class="maildiv griditem">
+                <input type="email" class="g    riditem" id="email" name="email" placeholder="your Email" required>
+                <span>
+                    <input type="checkbox" id="newscheckbox" name="newscheckbox" checked>
+                    <p>Subscribe to newsletter</p>
+                </span>
+            </div>
+            <input type="tel" class="griditem" id="tel_number" name="tel_number"
+                placeholder="your phone number (optional)">
+            <select required>
+                <!-- requires no-value at first entry with empty value-->
+                <option value="">Select music genre</option>
+                <option value="rock" id="rock">Rock</option>
+                <option value="pop" id="pop">Pop</option>
+                <option value="jazz" id="jazz">Jazz</option>
+                <option value="classic" id="classic">Classic</option>
+                <option value="bagpipe" id="bagpipe">Scottish bagpipe</option>
+                <option value="other_music" id="other_music">Other music</option>
+            </select>
+            <textarea class="griditem" id="textarea" name="textarea"
+                placeholder="Tell us what makes your preferred artist special and what distinguishes him from others."
+                required></textarea>
+            <button type="reset" class="griditem formbutton">Reset</button>
+            <button class="griditem formbutton">Submit</button>
+        </form>
+        </div>
+        <footer>
+            <p>First homework at programming school <a href="http://technigo.io" target="_blank">Technigo.</a></p>
+            <p>Coded by <a href="https://www.linkedin.com/in/frauke-s-395242201/" target="_blank">Frauke Schmidt</a>
+            </p>
+        </footer>
+</body>
+
+</html>
