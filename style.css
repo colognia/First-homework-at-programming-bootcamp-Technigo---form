@@ -10,11 +10,12 @@
 
 :root {
     font-family: 'Oxygen', sans-serif;
-    /* light 300, regular 400, bold 500 */
+    /* light 300, regular 400, bold 700 */
     --primarycolor: hsla(302, 75%, 60%, 100%);
     --secondarycolor: hsla(302, 62%, 23%, 80%);
     --formbackground: hsla(0, 5%, 30%, 40%);
     --bodybackground: rgb(35, 35, 37);
+    --borderradius: 30px;
     color: var(--primarycolor);
 }
 
@@ -34,25 +35,81 @@ img {
     /* std-setting */
 }
 
-/* formdiv */
+/* formdiv --------------------------- */
 main {
     background-color: var(--formbackground);
     width: 90%;
     max-width: 500px;
     border: 3px solid var(--primarycolor);
-    border-radius: 30px;
+    border-radius: var(--borderradius);
     padding: 8%;
 }
 
 h1 {
-    font-size: 20px;
+    font-size: clamp(1.5em, 4vw, 6em);
     letter-spacing: .2em;
     text-shadow: 2px 2px 1px var(--secondarycolor);
+    text-align: center;
+    margin-bottom: 1.5em;
 }
 
-/* footer */
+form {
+    display: grid;
+    gap: 1em;
+}
+
+.griditem {
+    background-color: var(--secondarycolor);
+    color: var(--primarycolor);
+    width: 100%;
+    border: 2px solid var(--primarycolor);
+    font-size: clamp(.5em, 3vw, 5em);
+    padding: 1em;
+    border-radius: var(--borderradius);
+}
+
+.griditem::placeholder {
+    color: var(--primarycolor);
+    font-size: clamp(.5em, 3vw, 5em);
+}
+
+#newscheckbox {
+    margin-left: 1em;
+}
+
+#subscribe_news {
+    display: inline;
+    font-size: clamp(.5em, 3vw, 5em);
+    text-shadow: 2px 2px 1px black;
+    margin-left: 1em;
+}
+
+#genre,
+#textarea {
+    border-radius: 0;
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: center;
+}
+
+.formbutton {
+    color: var(--secondarycolor);
+    background-color: var(--primarycolor);
+    border: 3px solid var(--secondarycolor);
+    width: 40%;
+    padding: .5em;
+    margin-inline: .5em;
+    font-weight: 700;
+}
+
+
+
+/* footer ----------------------------*/
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    font-size: .5em;
 }

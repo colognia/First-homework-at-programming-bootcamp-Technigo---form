@@ -35,7 +35,7 @@
 <body>
     <main>
         <div class="h1gradientdiv">
-            <h1>Get involved and share your favourite music artist with the community !</h1>
+            <h1>Get involved and share your favourite music artist with the community&nbsp;!</h1>
         </div>
         <!-- extradiv for gradient necessary -->
         <form action="#" id="form" method="post" target="_self">
@@ -44,16 +44,16 @@
             <input type="text" class="griditem" id="lastname" name="lastname" placeholder="your last name" required>
             <input type="text" class="griditem" id="artistname" name="artistname" placeholder="favourite artist name"
                 required>
-            <div class="maildiv griditem">
-                <input type="email" class="g    riditem" id="email" name="email" placeholder="your Email" required>
+            <div class="maildiv">
+                <input type="email" class="griditem" id="email" name="email" placeholder="your Email" required>
                 <span>
                     <input type="checkbox" id="newscheckbox" name="newscheckbox" checked>
-                    <p>Subscribe to newsletter</p>
+                    <p id="subscribe_news">Subscribe to newsletter</p>
                 </span>
             </div>
             <input type="tel" class="griditem" id="tel_number" name="tel_number"
                 placeholder="your phone number (optional)">
-            <select required>
+            <select class="griditem" id="genre" required>
                 <!-- requires no-value at first entry with empty value-->
                 <option value="">Select music genre</option>
                 <option value="rock" id="rock">Rock</option>
@@ -63,11 +63,16 @@
                 <option value="bagpipe" id="bagpipe">Scottish bagpipe</option>
                 <option value="other_music" id="other_music">Other music</option>
             </select>
-            <textarea class="griditem" id="textarea" name="textarea"
+            <textarea class="griditem" id="textarea" name="textarea" rows="3"
                 placeholder="Tell us what makes your preferred artist special and what distinguishes him from others."
                 required></textarea>
-            <button type="reset" class="griditem formbutton">Reset</button>
-            <button class="griditem formbutton">Submit</button>
+            <div class="buttondiv">
+                <button type="reset" class="griditem formbutton">Reset</button>
+                <button class="griditem formbutton">Submit</button>
+            </div>
+
+
+
         </form>
         </div>
         <footer>
