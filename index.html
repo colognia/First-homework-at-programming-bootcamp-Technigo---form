@@ -26,7 +26,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="#">
     <!-- todo icon -->
     <title>1st homework for programming students - building a form</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
@@ -34,21 +33,21 @@
 
 <body>
     <main>
-        <div class="h1gradientdiv">
+        <div>
             <h1>Get involved and share your favourite music artist with the community&nbsp;!</h1>
         </div>
-        <!-- extradiv for gradient necessary -->
+        <!-- extradiv for gradient necessary, with bck-pic not . Decided no gradient. -->
         <form action="#" id="form" method="post" target="_self">
             <!-- wird grid, ul macht keinen Sinn -->
             <input type="text" class="griditem" id="firstname" name="firstname" placeholder="your first name" required>
             <input type="text" class="griditem" id="lastname" name="lastname" placeholder="your last name" required>
             <input type="text" class="griditem" id="artistname" name="artistname" placeholder="favourite artist name"
                 required>
-            <div class="maildiv">
+            <div>
                 <input type="email" class="griditem" id="email" name="email" placeholder="your Email" required>
-                <span>
+                <span class="checkboxcontainer">
                     <input type="checkbox" id="newscheckbox" name="newscheckbox" checked>
-                    <p id="subscribe_news">Subscribe to newsletter</p>
+                    <p id="subscribe"><label for="newscheckbox">Subscribe to newsletter</label></p>
                 </span>
             </div>
             <input type="tel" class="griditem" id="tel_number" name="tel_number"
@@ -63,23 +62,22 @@
                 <option value="bagpipe" id="bagpipe">Scottish bagpipe</option>
                 <option value="other_music" id="other_music">Other music</option>
             </select>
-            <textarea class="griditem" id="textarea" name="textarea" rows="3"
+            <textarea class="griditem" id="textarea" name="textarea" rows="4"
                 placeholder="Tell us what makes your preferred artist special and what distinguishes him from others."
                 required></textarea>
             <div class="buttondiv">
+                <!-- without joining in 1 div together and declacring span 2 not possible -->
                 <button type="reset" class="griditem formbutton">Reset</button>
                 <button class="griditem formbutton">Submit</button>
             </div>
-
-
-
         </form>
-        </div>
-        <footer>
-            <p>First homework at programming school <a href="http://technigo.io" target="_blank">Technigo.</a></p>
-            <p>Coded by <a href="https://www.linkedin.com/in/frauke-s-395242201/" target="_blank">Frauke Schmidt</a>
-            </p>
-        </footer>
+    </main>
+    <footer>
+        <p>First homework at programming school <a href="http://technigo.io" target="_blank">Technigo.</a></p>
+        <p>Coded by <a href="https://www.linkedin.com/in/frauke-s-395242201/" target="_blank">Frauke Schmidt on week
+                32 in august 2023.</a>
+        </p>
+    </footer>
 </body>
 
 </html>

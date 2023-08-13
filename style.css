@@ -13,8 +13,8 @@
     /* light 300, regular 400, bold 700 */
     --primarycolor: hsla(302, 75%, 60%, 100%);
     --secondarycolor: hsla(302, 62%, 23%, 80%);
-    --formbackground: hsla(0, 5%, 30%, 40%);
     --bodybackground: rgb(35, 35, 37);
+    --formbackground: hsla(0, 5%, 30%, 40%);
     --borderradius: 30px;
     color: var(--primarycolor);
 }
@@ -26,6 +26,7 @@ body {
     background-repeat: no-repeat;
     background-color: var(--bodybackground);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -39,14 +40,15 @@ img {
 main {
     background-color: var(--formbackground);
     width: 90%;
-    max-width: 500px;
+    max-width: 360px;
     border: 3px solid var(--primarycolor);
     border-radius: var(--borderradius);
     padding: 8%;
+    margin-bottom: 1em;
 }
 
 h1 {
-    font-size: clamp(1.5em, 4vw, 6em);
+    font-size: 24px;
     letter-spacing: .2em;
     text-shadow: 2px 2px 1px var(--secondarycolor);
     text-align: center;
@@ -62,36 +64,107 @@ form {
     background-color: var(--secondarycolor);
     color: var(--primarycolor);
     width: 100%;
+    max-height: 1.8em;
+    /* because of artist, would grow too much */
     border: 2px solid var(--primarycolor);
-    font-size: clamp(.5em, 3vw, 5em);
-    padding: 1em;
+    font-size: 18px;
+    padding: 0.2em .5em;
     border-radius: var(--borderradius);
 }
 
-.griditem::placeholder {
+.griditem::placeholder,
+select#genre option {
+    /* not possible with css to change gap between select options, only font size*/
     color: var(--primarycolor);
-    font-size: clamp(.5em, 3vw, 5em);
+    font-size: 16px;
+}
+
+.griditem:hover {
+    filter: brightness(120%);
+}
+
+/* costum checkbox for Email----------------- */
+
+span.checkboxcontainer {
+    /* works without span upfront, just better readable */
+    margin-top: .3em;
+    display: flex;
+    align-items: center;
+    /* used to align checkbox vertically, otherway at bottom */
+    position: relative;
 }
 
 #newscheckbox {
-    margin-left: 1em;
+    cursor: pointer;
+    /* checkbox and its description need pointer seperateley */
+    /* no display none-> screenreaders and no tab order */
+    opacity: 0;
+    position: absolute;
+    /* anchor is span */
 }
 
-#subscribe_news {
-    display: inline;
-    font-size: clamp(.5em, 3vw, 5em);
-    text-shadow: 2px 2px 1px black;
-    margin-left: 1em;
+span.checkboxcontainer label {
+    cursor: pointer;
+    /* not inheritabel by parent p */
+    display: flex;
 }
+
+span.checkboxcontainer label::before {
+    /* fake checkbox */
+    content: "";
+    min-width: 1em;
+    height: 1em;
+    background-color: var(--secondarycolor);
+    color: var(--primarycolor);
+    border: 2px solid var(--primarycolor);
+    border-radius: 5px;
+    margin-right: .5em;
+    /* margin-left for #subscribe not working */
+}
+
+span.checkboxcontainer label:hover::before {
+    filter: brightness(120%);
+}
+
+/* add checkmark when clicked */
+span.checkboxcontainer #newscheckbox:checked+p>label::before {
+    /* my label is beneath p ! . works also with ~*/
+    content: "\002714";
+    display: flex;
+    /* surprisingly here and not on a parent */
+    align-items: center;
+    justify-content: center;
+}
+
+span.checkboxcontainer #newscheckbox:focus+p>label::before {
+    outline-style: solid;
+    /* outline-color: initial; can not set std color*/
+}
+
+#subscribe {
+    /* display: inline; */
+    /* otherwise p element block and line break if parent is NO flexbox*/
+    font-size: 16px;
+    text-shadow: 2px 2px 1px black;
+}
+
+/* end costum checkbox ------------------ */
 
 #genre,
 #textarea {
     border-radius: 0;
 }
 
+#textarea {
+    max-height: unset;
+    /* otherwise limited by grid-item max-height */
+}
+
 .buttondiv {
     display: flex;
+    /* ohne flex ist Zelle WEDER grid noch flex, einfach block. Daher buttons inline, aber können nicht zentriert werden. */
     justify-content: center;
+
 }
 
 .formbutton {
@@ -99,17 +172,46 @@ form {
     background-color: var(--primarycolor);
     border: 3px solid var(--secondarycolor);
     width: 40%;
-    padding: .5em;
-    margin-inline: .5em;
+    padding: .2em .5em;
+    margin: .5em .5em 0 .5em;
     font-weight: 700;
+    cursor: pointer;
 }
 
 
 
 /* footer ----------------------------*/
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    font-size: .5em;
+    font-size: 1em;
+}
+
+/* @media ----------------------------- */
+@media (min-width: 670px) {
+    main {
+        width: 80%;
+        max-width: 700px;
+        padding: 4%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .griditem {
+        font-size: 24px;
+    }
+
+    .griditem::placeholder,
+    select#genre option {
+        font-size: 18px;
+    }
+
+    #textarea,
+    .buttondiv {
+        grid-column: span 2;
+    }
 }
