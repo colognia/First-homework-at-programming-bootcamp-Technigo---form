@@ -46,7 +46,7 @@ This is a solution to the first homework for the students:
 
 ## My process
 - check out examples for forms, collecting screenshots, going for transparent form
-- making a feature plan: what form should do and how both views should look like. I sketched the basic structure of my nested containers.
+- making a feature plan: what form should do and how both views should look like. I sketched the basic structure of my nested containers. Working with li items like suggested made no sense for me, so used divs.
 - finding appropriate background image 
 - making a sketch with figma (4 hours)
 - build html top to bottom, mobile first
@@ -54,8 +54,6 @@ This is a solution to the first homework for the students:
 - write a little javascript for first time
 - check and verify frequently with firefox and its developer console
 - consulting my own notes regarding usage of tags/options, consulting developers.mozilla.org and w3schools, checking stackoverflow
-
-
 
 ### Built with
 
