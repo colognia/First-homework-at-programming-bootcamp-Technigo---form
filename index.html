@@ -1,27 +1,10 @@
-<!-- Explanation Section - You Can delete this after you start -->
-<!-- <section>
-    <h1>Start Building your form here:</h1>
-    <p>In this exercise, you will create a fun and interactive HTML form to collect information about people's favorite
-        musical artists.</p>
-    <p>This exercise will help you practice creating various form elements and understand how to gather user input.</p>
-    <p>This form should contain the following:</p>
-    <ul>
-        <li>Name field</li>
-        <li>Email field</li>
-        <li>Phone field</li>
-        <li>A dropdown field to ask for favorite genre</li>
-        <li>A text area field to ask the user to explain why they like this genre so much</li>
-        <li>A button to submit the form</li>
-        <li>A button to reset the form</li>
-    </ul>
-    <p><span>Important:</span> Remember to add labels for each of the inputs asked for</p>
-</section> -->
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta name="charset" content="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Frauke Schmidt">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
     <title>1st homework for programming students - building a form</title>
@@ -91,7 +74,7 @@
         // } ....or...
 
         for (let i = 0; i < textfields.length; i++) {
-            textfields[i].setAttribute("maxlength", "5")
+            textfields[i].setAttribute("maxlength", "30")
         }
 
         const textarea = document.getElementsByTagName("textarea")[0];
