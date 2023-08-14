@@ -1,5 +1,4 @@
 /* general settings */
-
 *,
 ::before,
 ::after {
@@ -65,7 +64,7 @@ form {
     color: var(--primarycolor);
     width: 100%;
     max-height: 1.8em;
-    /* because of artist, would grow too much */
+    /* because of artistfield, would grow too much */
     border: 2px solid var(--primarycolor);
     font-size: 18px;
     padding: 0.2em .5em;
@@ -141,7 +140,8 @@ span.checkboxcontainer #newscheckbox:focus+p>label::before {
     /* outline-color: initial; can not set std color*/
 }
 
-#subscribe {
+#subscribe,
+footer {
     /* display: inline; */
     /* otherwise p element block and line break if parent is NO flexbox*/
     font-size: 16px;
@@ -183,6 +183,10 @@ span.checkboxcontainer #newscheckbox:focus+p>label::before {
 /* footer ----------------------------*/
 footer {
     font-size: 1em;
+}
+
+footer a {
+    color: var(--primarycolor);
 }
 
 /* @media ----------------------------- */

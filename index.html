@@ -23,8 +23,7 @@
     <meta name="charset" content="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="#">
-    <!-- todo icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
     <title>1st homework for programming students - building a form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,10 +73,30 @@
     </main>
     <footer>
         <p>First homework at programming school <a href="http://technigo.io" target="_blank">Technigo.</a></p>
-        <p>Coded by <a href="https://www.linkedin.com/in/frauke-s-395242201/" target="_blank">Frauke Schmidt on week
-                32 in august 2023.</a>
+        <p>Coded by <a href="https://www.linkedin.com/in/frauke-s-395242201/" target="_blank">Frauke Schmidt</a> on week
+            32 in august 2023.
         </p>
     </footer>
+    <script>
+        // adding maxlength=30 to all textfields, with css not possible
+
+        const textfields = document.getElementsByTagName("input");
+        // makes an array
+        // for (i in textfields) {
+        //     textfields[i].setAttribute("maxlength", "30");
+        // } -> not working
+
+        // for (let i of textfields) {
+        //     i.setAttribute("maxlength", "30")
+        // } ....or...
+
+        for (let i = 0; i < textfields.length; i++) {
+            textfields[i].setAttribute("maxlength", "5")
+        }
+
+        const textarea = document.getElementsByTagName("textarea")[0];
+        textarea.setAttribute("maxlength", "2000");
+    </script>
 </body>
 
 </html>
