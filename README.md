@@ -73,7 +73,7 @@ Want to use more JS slowly but surely. Want to get faster.
 
 ### Useful resources
 
-w3schools, dev.mozilla.org, stackoverflow, my bootcamp Technigo, Videos of Kevin Powell (css god)
+w3schools, dev.mozilla.org, stackoverflow, forum freecodecamp, my bootcamp Technigo, Videos of Kevin Powell (css god)
 
 ## Author
 
