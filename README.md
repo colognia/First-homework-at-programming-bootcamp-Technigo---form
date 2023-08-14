@@ -45,10 +45,13 @@ This is a solution to the first homework for the students:
 - Live Site URL: [https://colognia.github.io/First-homework-at-programming-bootcamp-Technigo---form/]
 
 ## My process
-- making a sketch with figma 
-- build html
+- check out examples for forms, collecting screenshots, going for transparent form
+- making a feature plan: what form should do and how both views should look like. I sketched the basic structure of my nested containers.
+- finding appropriate background image 
+- making a sketch with figma (4 hours)
+- build html top to bottom, mobile first
 - create css
-- write a little javascript
+- write a little javascript for first time
 - check and verify frequently with firefox and its developer console
 - consulting my own notes regarding usage of tags/options, consulting developers.mozilla.org and w3schools, checking stackoverflow
 
@@ -63,11 +66,8 @@ This is a solution to the first homework for the students:
 
 ### What I learned
 
-First I was looking for nice examples to get ideas, I wanted to to sth with a transparent background.
-Then I made a feature plan, what my form should do how both views should look like. I sketched the basic structure of my nested containers.  Then I found an appropriate background image. 
-First I spend 4 hours on figma to create 2 layouts and figma is new to me. 
-Finally started coding html first and then styling from top to bottom, mobile view first.
-Used a little bit of JS first time and had problems with it, but finally got a hin from a classmate.
+Had to deal with figma which is new to me, took me a lot time to get kind of used to it.
+Used a little bit of JS first time and had problems with it, but finally got a hint from a classmate and later as well from freecodecamp forum to explain why it was not working.
 
 ### Continued development
 
