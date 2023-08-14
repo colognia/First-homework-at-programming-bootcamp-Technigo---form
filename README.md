@@ -37,7 +37,7 @@ This is a solution to the first homework for the students:
 
 ### Screenshot
 
-![](./pics/screenshots/desktop.png) and ![](./pics/screenshots/mobile.png)
+![](./pics/desktop.png) and ![](./pics/mobile.png)
 
 ### Links
 
